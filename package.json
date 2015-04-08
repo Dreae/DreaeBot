@@ -1,0 +1,29 @@
+{
+  "name": "dreaebot",
+  "version": "0.0.1",
+  "author": "dreae",
+  "keywords": [
+    "xmpp",
+    "hubot",
+    "campfire",
+    "bot"
+  ],
+  "description": "A simple helpful robot for your Company",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "node-xmpp": ">= 1.0.0-alpha2",
+    "coffee-script": ">= 1.6.3"
+  },
+  "engines": {
+    "node": ">= 0.8.x",
+    "npm": ">= 1.1.x"
+  },
+  "main": "./index",
+  "bin": {
+    "dreaebot": "./bin/dreaebot"
+  }
+}

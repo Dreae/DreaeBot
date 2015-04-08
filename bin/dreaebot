@@ -1,0 +1,8 @@
+#!/usr/bin/env coffee
+Robot = require '..'
+
+options = process.argv.slice(2)
+if options.length < 4
+  console.log 'Usage: dreaebot <jid> <password> <room> <nick>'
+
+robot = new Robot options[0], options[1], options[2], options[3]
