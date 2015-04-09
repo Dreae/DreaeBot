@@ -3,7 +3,7 @@ querystring = require 'querystring'
 util = require 'util'
 
 module.exports = (robot) ->
-  robot.hear /\s*(?:https|http):\/\/(?:www\.)?(?:youtube\.com\/watch\?\S*v=(\S+)|youtu\.be\/(\S+))/i, (msg) ->
+  robot.hear /\s*(?:https|http):\/\/(?:www\.)?(?:youtube\.com\/watch\?\S*v=(\S+)|youtu\.be\/([^\?]+))/i, (msg) ->
     vid_id = if msg.match[1] then msg.match[1] else msg.match[2]
     params = {'id': vid_id, 'part': 'snippet', 'key': process.env.GOOGLE_API_KEY};
     request 'https://content.googleapis.com/youtube/v3/videos?' + querystring.stringify(params), (error, response, body) ->
