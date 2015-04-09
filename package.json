@@ -15,8 +15,9 @@
     }
   ],
   "dependencies": {
+    "coffee-script": ">= 1.6.3",
     "node-xmpp": ">= 1.0.0-alpha2",
-    "coffee-script": ">= 1.6.3"
+    "request": "^2.55.0"
   },
   "engines": {
     "node": ">= 0.8.x",
