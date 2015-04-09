@@ -9,6 +9,7 @@ class Message
           return child.children.join(' ')
       return ''
     )()
+    @from = @stanza.attrs.from.substring(@stanza.attrs.from.lastIndexOf('/') + 1)
 
     @send = @robot.send
     @send_img = @robot.send_img
@@ -34,6 +35,9 @@ class Message
         callback img.unescapedUrl
         return
     );
+
+  reply: (msg) =>
+    @send "#{@from}: #{msg}"
 
   random: (array) =>
     return array[Math.floor(Math.random() * array.length)]
